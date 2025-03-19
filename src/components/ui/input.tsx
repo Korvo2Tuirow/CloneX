@@ -15,7 +15,7 @@ type Props = {
 
 export const Input = ({placeholder, value, password, icon, filled, onChange}: Props) => {
 
-    const [showPassword, setShowPassord] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
 
     return ( 
         <div className={`flex items-center h-14 rounded-3xl border-2 border-gray-700 has-[:focus]:border-white ${filled && "bg-gray-700"}`}>
@@ -37,7 +37,7 @@ export const Input = ({placeholder, value, password, icon, filled, onChange}: Pr
 
             {password && 
                 <FontAwesomeIcon
-                    onClick={()=>setShowPassord(!showPassword)}
+                    onClick={()=>setShowPassword(!showPassword)}
                     icon={showPassword ? faEye : faEyeSlash}
                     className="cursor-pointer mr-4 size-6 text-gray-500"
                 />}
