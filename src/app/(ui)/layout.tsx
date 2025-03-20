@@ -1,7 +1,8 @@
 import NavItem from "@/components/nav/nav-item";
 import NavLogout from "@/components/nav/nav-logout";
+import { NavMayProfile } from "@/components/nav/nav-myprofile";
 import Logo from "@/components/ui/logo";
-import { faRightFromBracket, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons/faHouse";
 import { ReactNode } from "react";
 
@@ -13,7 +14,7 @@ const Layout = ({ children }: Props) => {
     return (
         <main className="min-h-screen flex justify-center mx-auto max-w-7xl">
 
-            <section className="flex lg:flex flex-col sticky top-0 h-screen w-72 px-3 border-r-2 border-gray-700">
+            <section className="hidden lg:flex flex-col sticky top-0 h-screen w-72 px-3 border-r-2 border-gray-700">
 
                 <div className="flex-1 mt-6">
                     <Logo size={24} />
@@ -34,6 +35,7 @@ const Layout = ({ children }: Props) => {
 
                 <div className="mb-6 flex flex-col gap-4">
                    <NavLogout/>
+                   <NavMayProfile/>
                 </div>
             </section>
 
