@@ -2,6 +2,7 @@ import NavItem from "@/components/nav/nav-item";
 import NavLogout from "@/components/nav/nav-logout";
 import { NavMayProfile } from "@/components/nav/nav-myprofile";
 import Logo from "@/components/ui/logo";
+import { SearchInput } from "@/components/ui/search-input";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons/faHouse";
 import { ReactNode } from "react";
@@ -43,8 +44,8 @@ const Layout = ({ children }: Props) => {
                 {children}
             </section>
 
-            <aside className="hidden lg:flex flex-col sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-700 gap-6">
-                DIREITA
+            <aside className="flex lg:flex flex-col sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-700 gap-6">
+               <SearchInput hideOnSearch />
             </aside>
         </main>
     );
