@@ -2,7 +2,9 @@ import NavItem from "@/components/nav/nav-item";
 import NavLogout from "@/components/nav/nav-logout";
 import { NavMayProfile } from "@/components/nav/nav-myprofile";
 import Logo from "@/components/ui/logo";
+import { RecommendationArea } from "@/components/ui/recommendation-area";
 import { SearchInput } from "@/components/ui/search-input";
+import { TrendingArea } from "@/components/ui/trending-area";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons/faHouse";
 import { ReactNode } from "react";
@@ -15,7 +17,7 @@ const Layout = ({ children }: Props) => {
     return (
         <main className="min-h-screen flex justify-center mx-auto max-w-7xl">
 
-            <section className="hidden lg:flex flex-col sticky top-0 h-screen w-72 px-3 border-r-2 border-gray-700">
+            <section className="hidden lg:flex flex-col sticky top-0 h-screen w-72 px-3 border-r-2 border-gray-900">
 
                 <div className="flex-1 mt-6">
                     <Logo size={24} />
@@ -44,8 +46,10 @@ const Layout = ({ children }: Props) => {
                 {children}
             </section>
 
-            <aside className="flex lg:flex flex-col sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-700 gap-6">
+            <aside className="hidden lg:flex flex-col sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-900 gap-6">
                <SearchInput hideOnSearch />
+               <TrendingArea/>
+               <RecommendationArea/>
             </aside>
         </main>
     );
