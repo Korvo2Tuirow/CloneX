@@ -2,7 +2,7 @@ import Link from "next/link"
 import { user} from "@/data/user"
 
 
-export const NavMayProfile = () =>{
+export const NavMyProfile = () =>{
     return(
         <div className="flex items-center">
             <div className="size-10 mr-2 rounded-full overflow-hidden">
